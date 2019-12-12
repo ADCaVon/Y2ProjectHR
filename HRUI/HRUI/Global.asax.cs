@@ -19,7 +19,7 @@ namespace HRUI
             var builder = new ContainerBuilder();
             //把当前程序集中的 Controller 都注册
             builder.RegisterControllers(typeof(MvcApplication).Assembly).PropertiesAutowired();
-            Assembly[] assemblies = new Assembly[] { Assembly.Load("HRBLL"), Assembly.Load("HRDAO") };
+            Assembly[] assemblies = new Assembly[] { Assembly.Load("HRBLL"),Assembly.Load("HRDAO") };
             builder.RegisterAssemblyTypes(assemblies)
             .AsImplementedInterfaces().PropertiesAutowired();
             var container = builder.Build();
