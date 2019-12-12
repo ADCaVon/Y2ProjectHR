@@ -53,39 +53,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EFbonus.cs" />
-    <Compile Include="EFconfig_file_first_kind.cs" />
-    <Compile Include="EFconfig_file_second_kind.cs" />
-    <Compile Include="EFconfig_file_third_kind.cs" />
-    <Compile Include="EFconfig_major.cs" />
-    <Compile Include="EFconfig_major_kind.cs" />
-    <Compile Include="EFconfig_primary_key.cs" />
-    <Compile Include="EFconfig_public_char.cs" />
-    <Compile Include="EFconfig_question_first_kind.cs" />
-    <Compile Include="EFconfig_question_second_kind.cs" />
-    <Compile Include="EFengage_answer.cs" />
-    <Compile Include="EFengage_answer_details.cs" />
-    <Compile Include="EFengage_exam.cs" />
-    <Compile Include="EFengage_exam_details.cs" />
-    <Compile Include="EFengage_interview.cs" />
-    <Compile Include="EFengage_major_release.cs" />
-    <Compile Include="EFengage_resume.cs" />
-    <Compile Include="EFengage_subjects.cs" />
-    <Compile Include="EFhuman_file.cs" />
-    <Compile Include="EFhuman_file_dig.cs" />
-    <Compile Include="EFmajor_change.cs" />
-    <Compile Include="EFsalary_grant.cs" />
-    <Compile Include="EFsalary_grant_details.cs" />
-    <Compile Include="EFsalary_standard.cs" />
-    <Compile Include="EFsalary_standard_details.cs" />
-    <Compile Include="EFtraining.cs" />
-    <Compile Include="EFusers.cs" />
+    <Compile Include="bonus.cs" />
+    <Compile Include="config_file_first_kind.cs" />
+    <Compile Include="config_file_second_kind.cs" />
+    <Compile Include="config_file_third_kind.cs" />
+    <Compile Include="config_major.cs" />
+    <Compile Include="config_major_kind.cs" />
+    <Compile Include="config_primary_key.cs" />
+    <Compile Include="config_public_char.cs" />
+    <Compile Include="config_question_first_kind.cs" />
+    <Compile Include="config_question_second_kind.cs" />
+    <Compile Include="engage_answer.cs" />
+    <Compile Include="engage_answer_details.cs" />
+    <Compile Include="engage_exam.cs" />
+    <Compile Include="engage_exam_details.cs" />
+    <Compile Include="engage_interview.cs" />
+    <Compile Include="engage_major_release.cs" />
+    <Compile Include="engage_resume.cs" />
+    <Compile Include="engage_subjects.cs" />
     <Compile Include="HRContext.cs" />
+    <Compile Include="human_file.cs" />
+    <Compile Include="human_file_dig.cs" />
+    <Compile Include="major_change.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="salary_grant.cs" />
+    <Compile Include="salary_grant_details.cs" />
+    <Compile Include="salary_standard.cs" />
+    <Compile Include="salary_standard_details.cs" />
+    <Compile Include="training.cs" />
+    <Compile Include="users.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

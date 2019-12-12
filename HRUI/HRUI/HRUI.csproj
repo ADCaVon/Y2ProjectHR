@@ -175,9 +175,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -207,6 +205,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\vue.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -221,27 +220,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -253,6 +234,24 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HRBLL\HRBLL.csproj">
+      <Project>{893f1687-799e-4ba2-9a58-1f9c000e7fb2}</Project>
+      <Name>HRBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRDAO\HRDAO.csproj">
+      <Project>{32379e09-939a-408c-9922-e3ff0449c5f3}</Project>
+      <Name>HRDAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRIBLL\HRIBLL.csproj">
+      <Project>{61d604a3-b7fc-49fb-8aec-18b291c95a61}</Project>
+      <Name>HRIBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRModel\HRModel.csproj">
+      <Project>{d314c4f5-e23a-4c93-9385-ca0e9bc884ef}</Project>
+      <Name>HRModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
