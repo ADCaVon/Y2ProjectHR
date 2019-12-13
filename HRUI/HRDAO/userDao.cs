@@ -8,7 +8,7 @@ using HRModel;
 using HREFEntity;
 namespace HRDAO
 {
-    public class userDao : DaoBase<HREFEntity.users>, IuserDao
+    public class userDao : DaoBase<users>, IuserDao
     {
         public async Task<List<M_users>> selectUser()
         {
