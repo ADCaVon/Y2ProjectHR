@@ -7,6 +7,7 @@ namespace HRModel
 {
 public class M_config_file_first_kind
     {
+        
  
         public System.Int16 ffk_id { get; set;}
          
