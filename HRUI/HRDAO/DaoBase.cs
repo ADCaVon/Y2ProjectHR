@@ -23,7 +23,14 @@ namespace HRDAO
             });
             return task;
         }
-
+        public List<T> GetAll2()
+        {
+           
+                return db.Set<T>()
+                  .AsNoTracking()
+                  .ToList();
+   
+        }
         //按条件查询
         public async Task<List<T>> GetWhere(Expression<Func<T, bool>> where)
         {
@@ -34,7 +41,21 @@ namespace HRDAO
             });
             return task;
         }
+        public List<T> GetWhereNoTK(Expression<Func<T, bool>> where)
+        {
+                return db.Set<T>().AsNoTracking()
+                .Where(where)
+                .ToList();
 
+        }
+        public List<T> FenYe<T, K>(Expression<Func<T, K>> order, Expression<Func<T, bool>> where, out int pages, out int rows, int currentPage, int pageSize) where T : class
+        {
+       
+                var data = db.Set<T>().OrderBy(order).Where(where);
+                rows = data.Count();
+                pages = (data.Count() % pageSize) > 0 ? (data.Count() / pageSize) + 1 : (data.Count() / pageSize);
+                return data.Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
+        }
         //添加
         public async Task<int> Add(T t)
         {
@@ -43,10 +64,21 @@ namespace HRDAO
             return await db.SaveChangesAsync();
         }
 
-
-
         //修改
         public int Update(T t, params string[] ps)
+        {
+            FenLi(t);
+            // odb.Detach()
+
+            db.Set<T>().Attach(t);
+            // db.Entry(t).State = System.Data.Entity.EntityState.Unchanged;
+            foreach (string item in ps)
+            {
+                db.Entry(t).Property(item).IsModified = true;
+            }
+            return db.SaveChanges();
+        }
+        public int Update2(T t, List<string> ps)
         {
             FenLi(t);
             // odb.Detach()
@@ -85,6 +117,15 @@ namespace HRDAO
 
                 ObjContext.Detach(objT);
             }
+        }
+
+        public int GetCount(Expression<Func<T, bool>> where)
+        {
+         
+                return db.Set<T>()
+                  .AsNoTracking().Where(where)
+                  .ToList().Count();
+ 
         }
     }
 }

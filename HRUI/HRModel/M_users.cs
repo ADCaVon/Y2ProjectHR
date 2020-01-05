@@ -8,7 +8,7 @@ namespace HRModel
 public class M_users
     {
  
-        public System.Int16 u_id { get; set;}
+        public System.Int32 u_id { get; set;}
          
         public System.String u_name { get; set;}
          

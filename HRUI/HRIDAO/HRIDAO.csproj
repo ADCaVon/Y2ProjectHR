@@ -40,10 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Iconfig_file_first_kindDao.cs" />
+    <Compile Include="Iconfig_file_second_kindDao.cs" />
+    <Compile Include="Iconfig_file_third_kindDao.cs" />
+    <Compile Include="Iconfig_majorDao.cs" />
+    <Compile Include="Iconfig_major_kindDao.cs" />
+    <Compile Include="Iconfig_public_charDao.cs" />
+    <Compile Include="Iengage_interviewDao.cs" />
+    <Compile Include="Iengage_major_releaseDao.cs" />
+    <Compile Include="Iengage_resumeDao.cs" />
+    <Compile Include="Ihuman_fileDao.cs" />
     <Compile Include="IuserDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HREFEntity\HREFEntity.csproj">
+      <Project>{20562c40-25dd-46e8-8062-40595398f6d9}</Project>
+      <Name>HREFEntity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HRModel\HRModel.csproj">
       <Project>{d314c4f5-e23a-4c93-9385-ca0e9bc884ef}</Project>
       <Name>HRModel</Name>

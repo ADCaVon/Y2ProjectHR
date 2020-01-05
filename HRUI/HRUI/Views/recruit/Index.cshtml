@@ -1,0 +1,77 @@
+﻿
+@{
+    Layout = null;
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/vue.js"></script>
+<div id="div1" class="container">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table table-bordered">
+        <tr class="info">
+            <th>
+                @Html.Label("编号")
+            </th>
+            <th>
+                @Html.Label("姓名")
+            </th>
+            <th>
+                @Html.Label("年龄")
+            </th>
+            <th>
+                @Html.Label("操作")
+            </th>
+        </tr>
+
+        <tr v-for="(item,index) in dt">
+            <td>
+                {{item.u_id}}
+            </td>
+            <td>
+                {{item.u_name}}
+            </td>
+            <td>
+                {{item.u_true_name}}
+            </td>
+            <td>
+                {{item.u_password}}
+            </td>
+            <td>
+                <a v-bind:href="'/Student/Edit/'+[item.Id]">修改</a> |
+                <a v-bind:href="'/Student/Delete/'+[item.Id]">删除</a> |
+            </td>
+        </tr>
+        <tr></tr>
+
+
+    </table>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var vm = new Vue({
+            el: "#div1",
+            data: {
+                dt:null
+            },
+            methods: {
+                load: function () {
+                    var t = this;//代表的是vm
+                    $.ajax({
+                        url: "/recruit/Index2",
+                        type: "post",
+                        success: function (msg) {
+                            t.dt = eval("(" + msg + ")");
+
+                        }
+                    })
+                }
+            }
+            ,
+            created: function () {
+                this.load();
+            }
+        });
+    })
+</script>
+

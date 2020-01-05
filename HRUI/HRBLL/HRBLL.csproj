@@ -40,10 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="config_file_first_kindBLL.cs" />
+    <Compile Include="config_file_second_kindBLL.cs" />
+    <Compile Include="config_file_third_kindBLL.cs" />
+    <Compile Include="config_majorBLL.cs" />
+    <Compile Include="config_major_kindBLL.cs" />
+    <Compile Include="config_public_charBLL.cs" />
+    <Compile Include="engage_interviewBLL.cs" />
+    <Compile Include="engage_major_releaseBLL.cs" />
+    <Compile Include="engage_resumeBLL.cs" />
+    <Compile Include="human_fileBLL.cs" />
     <Compile Include="userBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HREFEntity\HREFEntity.csproj">
+      <Project>{20562c40-25dd-46e8-8062-40595398f6d9}</Project>
+      <Name>HREFEntity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HRIBLL\HRIBLL.csproj">
       <Project>{61d604a3-b7fc-49fb-8aec-18b291c95a61}</Project>
       <Name>HRIBLL</Name>

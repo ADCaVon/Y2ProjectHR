@@ -40,7 +40,7 @@ namespace HREFEntity
 
         public System.String human_major_id { get; set; }
 
-        public System.String hunma_major_name { get; set; }
+        public System.String human_major_name { get; set; }
 
         public System.String human_telephone { get; set; }
 

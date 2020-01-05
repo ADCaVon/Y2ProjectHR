@@ -40,13 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Iconfig_file_second_kindBLL.cs" />
+    <Compile Include="Iconfig_file_first_kindBLL.cs" />
+    <Compile Include="Iconfig_file_third_kindBLL.cs" />
+    <Compile Include="Iconfig_majorBLL.cs" />
+    <Compile Include="Iconfig_major_kindBLL.cs" />
+    <Compile Include="Iconfig_public_charBLL.cs" />
+    <Compile Include="Iengage_interviewBLL.cs" />
+    <Compile Include="Iengage_major_releaseBLL.cs" />
+    <Compile Include="Iengage_resumeBLL.cs" />
+    <Compile Include="Ihuman_fileBLL.cs" />
     <Compile Include="IuserBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HRIDAO\HRIDAO.csproj">
-      <Project>{bea3c3d0-20cc-4fa9-914c-4f0d75b35601}</Project>
-      <Name>HRIDAO</Name>
+    <ProjectReference Include="..\HREFEntity\HREFEntity.csproj">
+      <Project>{20562c40-25dd-46e8-8062-40595398f6d9}</Project>
+      <Name>HREFEntity</Name>
     </ProjectReference>
     <ProjectReference Include="..\HRModel\HRModel.csproj">
       <Project>{d314c4f5-e23a-4c93-9385-ca0e9bc884ef}</Project>
